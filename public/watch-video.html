@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>watch</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="styleDesign.css">
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo">
+         <img src="images/Logo Aury Website.png" alt="Logo Aury Web">
+       </a>
+
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/Foto Profil.jpeg" class="image" alt="">
+         <h3 class="name">Baptista Yohana Vallen</h3>
+         <p class="role">Mahasiswa</p>
+         <a href="profile.html" class="btn">View Profile</a>
+         <div class="flex-btn">
+            <a href="signIn.html" class="option-btn">Login</a>
+            <a href="signUp.html" class="option-btn">Register</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/Foto Profil.jpeg" class="image" alt="">
+      <h3 class="name" id="student-name"></h3>
+      <p class="role">Mahasiswa</p>
+      <a href="profile.html" class="btn">View Profile</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Class</span></a>
+      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>Contact us</span></a>
+   </nav>
+
+</div>
+
+<section class="watch-video">
+   <div class="video-container">
+      <div class="transcript">
+         <!-- <textarea id="transcript" rows="20" cols="100" placeholder="Transkrip materi dosen akan ditampilkan di sini..."></textarea> -->
+          <p id="data-transcript"></p>
+      </div>
+      <div class="info">
+         <p class="date"><i class="fas fa-calendar"></i><span>22-10-2024</span></p>
+      </div>
+      <div class="tutor">
+         <img src="images/Wira.jpg" alt="">
+         <div>
+            <h3>Wira Beru Aryasetya</h3>
+            <span>Lecturer</span>
+         </div>
+      </div>
+      </form>
+      <p class="description">
+         Haloo, kita akan mengenal Konsep Sistem Informasi yang dapat memberikan pemahaman mendalam mengenai bagaimana Sistem Informasi digunakan dalam bisnis atau teknologi. Selamat belajar!
+      </p>
+      <!-- <form action="/unduh_transkrip" method="post"> -->
+         <button id="downloadPdf" class="inline-btn">Unduh PDF</button>
+      <!-- </form> -->
+   </div>
+
+</section>
+
+<section class="comments">
+
+   <h1 class="heading">5 comments</h1>
+
+   <form action="" class="add-comment">
+      <h3>Add Comments</h3>
+      <textarea name="comment_box" placeholder="enter your comment" required maxlength="1000" cols="30" rows="10"></textarea>
+      <input type="submit" value="add comment" class="inline-btn" name="add_comment">
+   </form>
+
+   <h1 class="heading">User comments</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="user">
+            <img src="images/Foto Profil.jpeg" alt="">
+            <div>
+               <h3>Baptista Yohana Vallen</h3>
+               <span>24-10-2024</span>
+            </div>
+         </div>
+         <div class="comment-box">Terima kasih, Pak untuk materinya</div>
+         <form action="" class="flex-btn">
+            <input type="submit" value="edit comment" name="edit_comment" class="inline-option-btn">
+            <input type="submit" value="delete comment" name="delete_comment" class="inline-delete-btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="user">
+            <img src="images/pic-2.jpg" alt="">
+            <div>
+               <h3>Kelly</h3>
+               <span>22-10-2024</span>
+            </div>
+         </div>
+         <div class="comment-box">Izin mempelajari materinya kembali, Pak saat kelas.
+            Semangat!</div>
+      </div>
+
+      <div class="box">
+         <div class="user">
+            <img src="images/pic-3.jpg" alt="">
+            <div>
+               <h3>Salemba</h3>
+               <span>24-07-2024</span>
+            </div>
+         </div>
+         <div class="comment-box">Izin mengunduh materinya, Pak Wira.
+            Terima kasih banyak, Pak Wira.
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="user">
+            <img src="images/pic-4.jpg" alt="">
+            <div>
+               <h3>Setiabudi</h3>
+               <span>22-10-2024</span>
+            </div>
+         </div>
+         <div class="comment-box">Materi yang tersedia membuat saya jadi fokus dan bisa memperhatikan lebih saat belajar.</div>
+      </div>
+
+      <div class="box">
+         <div class="user">
+            <img src="images/pic-5.jpg" alt="">
+            <div>
+               <h3>Nirmala</h3>
+               <span>22-10-2024</span>
+            </div>
+         </div>
+         <div class="comment-box">Haturnuhun, Pak.</div>
+      </div>
+
+      <div class="box">
+         <div class="user">
+            <img src="images/pic-2.jpg" alt="">
+            <div>
+               <h3>Clarissa</h3>
+               <span>22-10-2024</span>
+            </div>
+         </div>
+         <div class="comment-box">Very helpfull, Sir. 
+         </div>
+      </div>
+
+   </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+   &copy; Aury 2024 Kelompok 39 Samsung Innovation Campus
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="main.js"></script>
+   
+</body>
+</html>
