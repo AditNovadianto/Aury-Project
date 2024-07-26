@@ -18,7 +18,9 @@ app.use(
   })
 );
 
-mongoose.connect("mongodb://localhost:27017/aury");
+mongoose.connect(
+  "mongodb+srv://adityanovadianto:adityanovadianto@cluster0.x9fuvep.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+);
 
 var db = mongoose.connection;
 
