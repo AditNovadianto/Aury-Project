@@ -19,7 +19,7 @@ app.use(
 );
 
 mongoose.connect(
-  "mongodb+srv://adityanovadianto:adityanovadianto@cluster0.x9fuvep.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  "mongodb+srv://adityanovadianto:aditNovadianto@cluster0.x9fuvep.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 );
 
 var db = mongoose.connection;
