@@ -5,11 +5,54 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(data); // Log data to see the structure
 
       if (data && data.length > 1) {
-        const dataTranscript = document.getElementById("data-transcript");
+        const dataTranscriptWira = document.getElementById(
+          "data-transcript-wira"
+        );
+
+        const dataTranscriptKarina = document.getElementById(
+          "data-transcript-karina"
+        );
+
+        const dataTranscriptHeo = document.getElementById(
+          "data-transcript-heo"
+        );
+
+        const dataTranscriptRanupatma = document.getElementById(
+          "data-transcript-ranupatma"
+        );
+
+        const dataTranscriptJeon = document.getElementById(
+          "data-transcript-jeon"
+        );
+
+        const dataTranscriptJerome = document.getElementById(
+          "data-transcript-jerome"
+        );
+
         const studentName = document.getElementById("student-name");
 
-        if (data[1] && dataTranscript) {
-          dataTranscript.innerText = data[1].text;
+        if (data[1].speaker == "Wira Beru Aryasetya" && dataTranscriptWira) {
+          dataTranscriptWira.innerText = data[1].text;
+        }
+
+        if (data[1].speaker == "Karina" && dataTranscriptKarina) {
+          dataTranscriptKarina.innerText = data[1].text;
+        }
+
+        if (data[1].speaker == "Heo Seong Beom" && dataTranscriptHeo) {
+          dataTranscriptHeo.innerText = data[1].text;
+        }
+
+        if (data[1].speaker == "Ranupatma Ayu" && dataTranscriptRanupatma) {
+          dataTranscriptRanupatma.innerText = data[1].text;
+        }
+
+        if (data[1].speaker == "Jeon Wonwoo" && dataTranscriptJeon) {
+          dataTranscriptJeon.innerText = data[1].text;
+        }
+
+        if (data[1].speaker == "Jerome Polin" && dataTranscriptJerome) {
+          dataTranscriptJerome.innerText = data[1].text;
         }
 
         if (data[0] && studentName) {

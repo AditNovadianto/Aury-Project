@@ -3,6 +3,7 @@ var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 const fs = require("fs");
 const path = require("path");
+require("dotenv").config();
 
 const dataFilePath = path.join(__dirname, "data.json");
 
@@ -18,9 +19,7 @@ app.use(
   })
 );
 
-mongoose.connect(
-  "mongodb+srv://adityanovadianto:aditNovadianto@cluster0.x9fuvep.mongodb.net/aury?retryWrites=true&w=majority&appName=Cluster0"
-);
+mongoose.connect(process.env.MONGO_URI);
 
 var db = mongoose.connection;
 
